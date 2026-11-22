@@ -1,0 +1,155 @@
+/* ============================================
+   Matcha Bar - style.css
+   Colours: matcha green, cream, charcoal
+   ============================================ */
+
+/* --- 1. Colour variables --- */
+:root {
+  --matcha: #6b8e23;
+  --matcha-dark: #4a6318;
+  --cream: #faf8f2;
+  --charcoal: #2e2e2b;
+  --muted: #6f6f68;
+  --border: #e2ded2;
+}
+
+/* --- 2. Reset: remove default browser spacing --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 3. Base page styles --- */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--charcoal);
+  background-color: var(--cream);
+}
+
+/* --- 4. Header and navigation --- */
+header {
+  background-color: var(--matcha);
+  color: #ffffff;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 1.1rem;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+}
+
+/* The current page gets a solid pill so it stands out */
+nav a[aria-current="page"] {
+  background-color: #ffffff;
+  color: var(--matcha-dark);
+  border-color: #ffffff;
+  font-weight: bold;
+}
+
+/* --- 5. Main content area --- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+main h2 {
+  font-size: 1.6rem;
+  color: var(--matcha-dark);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
+}
+
+main > h2:first-child {
+  margin-top: 0;
+}
+
+main h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 65ch;
+}
+
+/* --- 6. Images --- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* The home page photo - capped so it stays a sensible size */
+main > img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* --- 7. Opening hours list --- */
+main > ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+main > ul > li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  max-width: 420px;
+}
+
+/* --- 8. Menu grid --- */
+.menu-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.menu-item {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.
